@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  background-color: beige;
+}
+
+.add-item-bar {
+  background-color: antiquewhite;
+  padding: 24px;
+  margin: 12px 0;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.add-item-bar > * {
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0 4px;
+}
+
+.button {
+  background-color: #fff;
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+
+}
+
+li {
+  list-style: none;
+}
