@@ -24,10 +24,14 @@ new Vue({
     addItem: function () {
       const newItem = {
         text: this.newItemText,
-        done: false
+        done: false,
       };
 
       this.todo.push(newItem);
+      this.newItemText = "";
+    },
+    toggleDone: function (index) {
+      this.todo[index].done = !this.todo[index].done;
     },
   },
 });

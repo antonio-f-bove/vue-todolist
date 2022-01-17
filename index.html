@@ -15,14 +15,16 @@
     <dir id="app">
 
       <div class="add-item-bar">
-        <input v-model="newItemText" type="text" placeholder="add item"/>
+        <input v-model="newItemText" @keyup.enter="addItem"
+        type="text" placeholder="add item"/>
         <div @click="addItem" class="button">Aggiungi</div>
       </div>
 
       <div class="todo">
         <ul>
-          <li v-for="(item, i) in todo" :class="item.done ? 'done' : ''">
-            <span class="item-text">{{ item.text }}<span/>
+          <li v-for="(item, i) in todo">
+            <span class="item-text" :class="item.done ? 'done' : ''" 
+            @click="toggleDone(i)">{{ item.text }}<span/>
             <span class="close" @click="removeItem(i)"></span>
           </li>
         </ul>

@@ -43,6 +43,7 @@ li {
 
 .close {
   margin-left: 12px;
+  cursor: pointer;
 }
 .close::after {
   font-family: "Font Awesome 5 Free";
@@ -51,6 +52,10 @@ li {
   font-size: 14px;
 }
 
-li.done {
+.item-text {
+  cursor: pointer;
+}
+
+span.done {
   text-decoration: line-through;
 }
