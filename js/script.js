@@ -15,10 +15,19 @@ new Vue({
         done: false,
       },
     ],
+    newItemText: "",
   },
   methods: {
-    closeItem: function(index) {
+    removeItem: function (index) {
       this.todo.splice(index, 1);
+    },
+    addItem: function () {
+      const newItem = {
+        text: this.newItemText,
+        done: false
+      };
+
+      this.todo.push(newItem);
     },
   },
 });

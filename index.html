@@ -15,15 +15,15 @@
     <dir id="app">
 
       <div class="add-item-bar">
-        <input type="text" />
-        <div class="button">Aggiungi</div>
+        <input v-model="newItemText" type="text" placeholder="add item"/>
+        <div @click="addItem" class="button">Aggiungi</div>
       </div>
 
       <div class="todo">
         <ul>
           <li v-for="(item, i) in todo" :class="item.done ? 'done' : ''">
-            {{ item.text }}
-            <div class="close" @click="closeItem(i)"></div>
+            <span class="item-text">{{ item.text }}<span/>
+            <span class="close" @click="removeItem(i)"></span>
           </li>
         </ul>
       </div>
