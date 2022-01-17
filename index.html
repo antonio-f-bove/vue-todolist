@@ -19,7 +19,8 @@
 
       <div class="todo">
         <ul>
-          <li v-for="item in todo">{{ item.text }}</li>
+          <li v-for="item in todo"
+          :class="item.done ? 'done' : ''">{{ item.text }}</li>
         </ul>
       </div>
     </dir>
