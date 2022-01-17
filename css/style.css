@@ -35,6 +35,20 @@
 
 li {
   list-style: none;
+  padding: 2px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  margin-left: 12px;
+}
+.close::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f057";
+  font-weight: 500;
+  font-size: 14px;
 }
 
 li.done {
